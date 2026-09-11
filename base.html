@@ -1,0 +1,10 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Health Monitor</title><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+body{background:#f5f8fb}.navbar{box-shadow:0 2px 10px #0001}.hero{padding:70px 0}.card{border:0;box-shadow:0 4px 18px #0000000d;border-radius:16px}.risk{font-weight:700}.low{color:#198754}.moderate{color:#d39e00}.high{color:#dc3545}.small-muted{color:#6c757d;font-size:.9rem}
+</style></head><body>
+<nav class="navbar navbar-expand-lg bg-white"><div class="container"><a class="navbar-brand fw-bold" href="/">❤️ AI Health Monitor</a>
+<div>{% if session.uid %}<a class="btn btn-outline-primary btn-sm" href="/dashboard">Dashboard</a> <a class="btn btn-outline-secondary btn-sm" href="/logout">Logout</a>{% else %}<a class="btn btn-primary btn-sm" href="/login">Login</a>{% endif %}</div></div></nav>
+<div class="container py-4">{% with messages=get_flashed_messages(with_categories=true) %}{% for cat,msg in messages %}<div class="alert alert-{{cat}}">{{msg}}</div>{% endfor %}{% endwith %}{% block content %}{% endblock %}</div>
+</body></html>

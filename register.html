@@ -1,0 +1,6 @@
+{% extends "base.html" %}{% block content %}<div class="row justify-content-center"><div class="col-lg-7"><div class="card p-4"><h2>Create Patient Account</h2>
+<form method="post" class="row g-3"><div class="col-md-6"><label>Name</label><input name="name" class="form-control" required></div>
+<div class="col-md-6"><label>Age</label><input name="age" type="number" class="form-control"></div><div class="col-12"><label>Email</label><input name="email" type="email" class="form-control" required></div>
+<div class="col-md-6"><label>Password</label><input name="password" type="password" class="form-control" required></div>
+<div class="col-md-6"><label>Allergies</label><input name="allergies" class="form-control"></div><div class="col-12"><label>Medical history</label><textarea name="medical_history" class="form-control"></textarea></div>
+<div class="col-12"><label>Current medications</label><textarea name="medications" class="form-control"></textarea></div><div class="col-12"><button class="btn btn-primary">Register</button></div></form></div></div></div>{% endblock %}
